@@ -30,6 +30,7 @@ public class sintaxeFuncoes {
     }
 
     public static void showResult(int value) {
+
         System.out.println("Higher = " + value);
     }
 }
