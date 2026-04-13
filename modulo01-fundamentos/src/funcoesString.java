@@ -25,8 +25,5 @@ public class funcoesString {
         System.out.println(vect[1]);
         System.out.println(vect[2]);
 
-
-
-
     }
 }
