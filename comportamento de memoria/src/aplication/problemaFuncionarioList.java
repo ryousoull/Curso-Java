@@ -21,7 +21,12 @@ public class problemaFuncionarioList {
         for (int i = 0; i < n; i++) {
             System.out.println("Employee # " + (i + 1) + ":");
             System.out.println("Id: ");
-            Integer id = sc.nextInt();
+            int id = sc.nextInt();
+            while (hasID(list, id)) {
+                System.out.println("Id already! Try again: ");
+                id = sc.nextInt();
+
+            }
             System.out.println("Name: ");
             sc.nextLine();
             String name = sc.nextLine();
@@ -63,5 +68,12 @@ public class problemaFuncionarioList {
             }
         }
         return null;
+        // outra maneira de fazer essa busca do id é usando o seguinte no codido principal: Employee emp = list.stram().filter(x -> x.getId() == opcId).findFirst().orElse(null); )
+    }
+
+    public static boolean hasID(List<Employee> list, int id) {
+        Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return emp != null;
+        // outra forma de fazer isso é usando o anyMach, pois ja retorna um True ou False, sendo mais eficiente: list.stream().anyMatch(x -> x.getId() == id);
     }
 }
