@@ -31,10 +31,10 @@ public class Program {
             if(opc == 'y'){
                 System.out.println("Valor adicional do terceirizado: ");
                 double charge = sc.nextDouble();
-                Employee employee = new OutsourcedEmployee(nome,horas,valorPorHora, listEmployee, charge);
+                Employee employee = new OutsourcedEmployee(nome,horas,valorPorHora,charge);
                 listEmployee.add(employee);
             } else {
-                Employee employee = new Employee(nome, horas, valorPorHora, listEmployee);
+                Employee employee = new Employee(nome, horas, valorPorHora);
                 listEmployee.add(employee);
             }
         }

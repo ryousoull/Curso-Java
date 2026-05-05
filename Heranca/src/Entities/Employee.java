@@ -7,16 +7,15 @@ public class Employee {
     private String name;
     private Integer hours;
     private Double valuePerHour;
-    private List<Employee> listEmployee = new ArrayList<>();
+
 
     public Employee(){
     }
 
-    public Employee(String name, Integer hours, Double valuePerHour, List<Employee> listEmployee) {
+    public Employee(String name, Integer hours, Double valuePerHour) {
         this.name = name;
         this.hours = hours;
         this.valuePerHour = valuePerHour;
-        this.listEmployee = listEmployee;
     }
 
     public String getName() {

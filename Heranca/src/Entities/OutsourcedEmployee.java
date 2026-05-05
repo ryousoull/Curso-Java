@@ -9,8 +9,8 @@ public class OutsourcedEmployee extends Employee{
     public OutsourcedEmployee(){
     }
 
-    public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, List<Employee> listEmployee, Double additionalCharge) {
-        super(name, hours, valuePerHour, listEmployee);
+    public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
+        super(name, hours, valuePerHour);
         this.additionalCharge = additionalCharge;
     }
 
