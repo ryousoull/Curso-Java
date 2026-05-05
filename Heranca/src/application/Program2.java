@@ -31,10 +31,10 @@ public class Program2 {
             System.out.print("Price: ");
             double price = sc.nextDouble();
 
-            if (opc == 'c'){
+            if (Character.toLowerCase(opc) == 'c'){
                 Object product;
                 list.add(new Product(name, price));
-            } else if (opc == 'u') {
+            } else if (Character.toLowerCase(opc) == 'u') {
                 System.out.println("Manufacture date (DD/MM/YYY): ");
                 LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 list.add(new UsedProduct(name, price, date));
